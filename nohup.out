@@ -1,0 +1,80 @@
+Traceback (most recent call last):
+  File "quickstart.py", line 179, in <module>
+    asyncio.run(main())
+  File "/usr/local/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "quickstart.py", line 174, in main
+    await task1
+  File "quickstart.py", line 64, in watch
+    results = service.users().watch(userId='me', body=body).execute()
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/googleapiclient/http.py", line 855, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://www.googleapis.com/gmail/v1/users/me/watch?alt=json returned "Invalid topicName does not match projects/quickstart-1565230748884/topics/*">
+Traceback (most recent call last):
+  File "quickstart.py", line 183, in <module>
+    asyncio.run(main())
+AttributeError: module 'asyncio' has no attribute 'run'
+Traceback (most recent call last):
+  File "quickstart.py", line 183, in <module>
+    asyncio.run(main())
+  File "/usr/local/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "quickstart.py", line 178, in main
+    await task1
+  File "quickstart.py", line 66, in watch
+    results = service.users().watch(userId='me', body=body).execute()
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/googleapiclient/http.py", line 851, in execute
+    method=str(self.method), body=self.body, headers=self.headers)
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/googleapiclient/http.py", line 184, in _retry_request
+    raise exception
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/googleapiclient/http.py", line 165, in _retry_request
+    resp, content = http.request(uri, method, *args, **kwargs)
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/google_auth_httplib2.py", line 198, in request
+    uri, method, body=body, headers=request_headers, **kwargs)
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/httplib2/__init__.py", line 1953, in request
+    cachekey,
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/httplib2/__init__.py", line 1618, in _request
+    conn, request_uri, method, body, headers
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/httplib2/__init__.py", line 1556, in _conn_request
+    response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1321, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.7/ssl.py", line 1052, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.7/ssl.py", line 911, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+Traceback (most recent call last):
+  File "quickstart.py", line 183, in <module>
+    asyncio.run(main())
+  File "/usr/local/lib/python3.7/asyncio/runners.py", line 43, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "quickstart.py", line 178, in main
+    await task1
+  File "quickstart.py", line 66, in watch
+    results = service.users().watch(userId='me', body=body).execute()
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/seven/workspace/py3.7.3/lib/python3.7/site-packages/googleapiclient/http.py", line 856, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 400 when requesting https://www.googleapis.com/gmail/v1/users/me/watch?alt=json returned "Bad Request">
+Traceback (most recent call last):
+  File "quickstart.py", line 11, in <module>
+    from apiclient import errors
+ModuleNotFoundError: No module named 'apiclient'
